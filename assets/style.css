@@ -1,0 +1,342 @@
+/* These styles are just to make it easier to see the blocks, initially. */
+
+body {
+	font-family: monospace;
+	background-color: #3A671D;
+}
+
+h1.channel-title {
+	color: #5C2E1B;
+}
+
+a {
+	color: #5C2E1B;
+}
+
+section,
+figure {
+/*	margin-top: 80px;*/
+/*	max-width: 600px;*/
+}
+
+#channel-description > *,
+figure > *:not(:first-child),
+.description > *:not(:first-child),
+.content > *:not(:first-child) {
+	display: block;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#text-block {
+/*	background-color: red;*/
+}
+
+section.image-blocks {
+/*	background-color: lightpink;*/
+}
+
+figure.image-block {
+/*	background-color: hotpink;*/
+	position: relative;
+	width: 99px;
+	top: 100px;
+	height: 75px;
+	z-index: 0;
+	margin: 0 30px 67px 30px;
+}
+
+img.image {
+	background-color: orangered;
+	top: 60%;
+	width: 100%;
+	height: 30%;
+	position: relative;
+}
+
+a.link {
+	background-color: lightgoldenrodyellow;
+}
+
+p.link-title {
+	background-color: seagreen;
+}
+
+div.bHolder {
+/*	background-color: teal;*/
+	position: relative;
+	width: 100px;
+	height: 75px;
+}
+
+#bush {
+	position: relative;
+	background-color: #76D458;
+	z-index: 1;
+}
+
+div.bBase1 {
+	top: 60%;
+	width: 100%;
+	height: 10%;
+}
+
+div.bBase2 {
+	top: ;
+	width: 7.69%;
+	height: 50%;
+}
+
+div.bBase3 {
+	top: -40%;
+	left: 23.07%;
+	width: 7.69%;
+	height: 40%;
+}
+
+div.bBase4 {
+	top: -90%;
+	left: 38.46%;
+	width: 7.69%;
+	height: 50%;
+}
+
+div.bBase5 {
+	top: -130%;
+	left: 53.84%;
+	width: 7.69%;
+	height: 40%;
+}
+
+div.bBase6 {
+	top: -190%;
+	left: 76.92%;
+	width: 7.69%;
+	height: 60%;
+}
+
+div.bBase7 {
+	top: -240%;
+	left: 92.31%;
+	width: 7.69%;
+	height: 50%;
+}
+
+div.bBase8 {
+	top: -270%;
+	left: 7.69%;
+	width: 15.38%;
+	height: 20%;
+}
+
+div.bBase9 {
+	top: -280%;
+	left: 30.77%;
+	width: 7.69%;
+	height: 20%;
+}
+
+div.bBase10 {
+	top: -290%;
+	left: 46.15%;
+	width: 15.38%;
+	height: 10%;
+}
+
+div.bBase11 {
+	top: -330%;
+	left: 46.15%;
+	width: 15.38%;
+	height: 10%;
+}
+
+div.bBase12 {
+	top: -320%;
+	left: 61.54%;
+	width: 7.69%;
+	height: 20%;
+}
+
+div.bBase13 {
+	top: -350%;
+	left: 69.23%;
+	width: 7.69%;
+	height: 10%;
+}
+
+div.bBase14 {
+	top: -350%;
+	left: 84.62%;
+	width: 7.69%;
+	height: 20%;
+}
+
+div.bBase15 {
+	top: -390%;
+	left: 84.62%;
+	width: 7.69%;
+	height: 10%;
+}
+
+section.text-blocks {
+/*	background-color: red;*/
+	position: relative;
+	width: 80vw;
+	height: auto;
+	left: 10vw;
+	margin: 0;
+	padding: 0;
+	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+div.tBlockHolder {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+figure.text-block {
+/*	background-color: orange;*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+/*	width: 100px;*/
+	position: relative;
+	padding: 0 75px 67px 75px;
+}
+
+h3.title {
+/*	background-color: yellow;*/
+	color: #502D1E;
+	writing-mode: vertical-rl;
+}
+
+h3.bush {
+	writing-mode: inherit;
+	
+	color: #86A865;
+	position: relative;
+	top: 91%;
+	z-index: 2;
+
+
+	font-size: 36px;
+	opacity: 80%;
+	word-break: break-all;
+	line-height: 0px;
+	text-align: center;
+}
+
+div.content {
+	color: #3EBF2F;
+	text-align: center;
+}
+
+figcaption.description {
+	position: relative;
+/*	background-color: #381A0D;*/
+	color: #3B7826;
+
+	width: 100%;
+	height: 10%;
+	top: 97.5%;
+	text-align: center;
+	line-height: 0%;
+	word-break: break-all;
+	font-size: 18px;
+}
+
+figcaption.bush {
+	opacity: 80%;
+	color: #26A22A;
+/*	#26A22A*/
+	top: -42%;
+	left: -5%;
+	width: 110%;
+	z-index: 3;
+
+	font-size: 24px;
+}
+
+p.type {
+	background-color: purple;
+}
+
+div.tHolder {
+	position: relative;
+	display: flex;
+	justify-content: center;
+/*	background-color: teal;*/
+	height: 150px;
+	width: 150px;
+}
+
+div.tLeaves {
+	position: absolute;
+	background-color: #3BB42D;
+	
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	min-width: 40%;
+
+	max-height: 85%;
+	min-height: 20%;
+	z-index: 1;
+
+	font-size: 24px;
+	line-height: 40%;
+	word-spacing: -12px;
+	word-break: break-all;
+	overflow: hidden;
+}
+
+div.tTrunk {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	background-color: #5C2E1B;
+	height: 100%;
+	width: auto;
+	min-width: 20%;
+	z-index: 0;
+
+	font-size: 36px;
+	overflow: hidden;
+	line-height: 5%;
+	word-spacing: -12px;
+	text-align: right;
+}
+
+div.sprout {
+	position: fixed;
+	height: 7.5px;
+	width: 7.5px;
+	transition: background-color 1.5s;
+}
+
+#sprout1 {}
+#sprout2 {}
+#sprout3 {}
+#sprout4 {}
+#sprout5 {}
+#sprout6 {}
+#sprout7 {}
+#sprout8 {}
+#sprout9 {}
+#sprout10 {}
+#sprout11 {}
+#sprout12 {}
+#sprout13 {}
+#sprout14 {}
+#sprout15 {}
+#sprout16 {}
+#sprout17 {}
+#sprout18 {}
+#sprout19 {}
+#sprout20 {}
+#sprout21 {}
+
+/* Clear them out once you’ve got your channel plugged in! */

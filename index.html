@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="assets/reset.css" rel="stylesheet">
+		<link href="assets/style.css" rel="stylesheet">
+		
+		<link href="assets/favicon.png" rel="icon">
+	</head>
+	<body>
+
+		<!-- Replace this URL with your channel to connect the API! -->
+		<a href="https://www.are.na/bryant-valladares-turcios/oh-to-be-a-forest" id="channel-url">
+			<h1 id="channel-title"></h1> <!-- The channel title will be inserted inside this h1. -->
+		</a>
+		<div id="channel-description"></div> <!-- Same here for the channel description. -->
+
+
+
+		<!-- All the channel “blocks” will be created as children, here. -->
+		<!-- You could move the classes to different section elements to separate the types! -->
+		<section class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
+		</section>
+
+
+		<!-- These are the templates for the various block types, below. -->
+		<!-- You can move/nest/remove any of the insertion points! -->
+		<!-- For example, you could only show images for actual image blocks. -->
+		<!-- You could not show the type if you group them by section, above. -->
+
+ 		<!-- Spotify, Soundcloud, etc. -->
+		<template id="audio-embed-block">
+			<figure class="audio-embed"> <!-- You can use the container classes to style a whole type. -->
+				<h3 class="title"></h3> <!-- Block title inserts here. -->
+				<img class="image"> <!-- Image/cover image source inserts here. -->
+				<div class="embed"></div> <!-- Embed iframe inserts here. -->
+				<a class="link"> <!-- Original URL inserts here. -->
+					<p class="link-title"></p> <!-- Link title inserts here. -->
+				</a>
+				<figcaption class="description"></figcaption> <!-- Block description inserts here. -->
+				<p class="type"></p> <!-- Block type/kind inserts here. -->
+			</figure>
+		</template>
+
+ 		<!-- Uploaded audio files. -->
+		<template id="audio-file-block">
+			<figure class="audio-file-block">
+				<h3 class="title"></h3>
+				<img class="image">
+				<audio class="audio" controls></audio> <!-- Audio source inserts here. -->
+				<figcaption class="description"></figcaption>
+				<p class="type"></p>
+			</figure>
+		</template>
+
+		<template id="image-block">
+			<figure class="image-block">
+				<h3 class="title bush"></h3>
+				<div class="bHolder">
+					<img class="image">
+					<div class="bBase1" id="bush"></div>
+					<div class="bBase2" id="bush"></div>
+					<div class="bBase3" id="bush"></div>
+					<div class="bBase4" id="bush"></div>
+					<div class="bBase5" id="bush"></div>
+					<div class="bBase6" id="bush"></div>
+					<div class="bBase7" id="bush"></div>
+					<div class="bBase8" id="bush"></div>
+					<div class="bBase9" id="bush"></div>
+					<div class="bBase10" id="bush"></div>
+					<div class="bBase11" id="bush"></div>
+					<div class="bBase12" id="bush"></div>
+					<div class="bBase13" id="bush"></div>
+					<div class="bBase14" id="bush"></div>
+					<div class="bBase15" id="bush"></div>
+				</div>
+				<a class="link">
+					<p class="link-title"></p>
+				</a>
+				<figcaption class="description bush"></figcaption>
+				<!-- <p class="type"></p> -->
+			</figure>
+		</template>
+
+		<template id="link-block">
+			<figure class="link-block">
+				<h3 class="title"></h3>
+				<img class="image">
+				<a class="link">
+					<p class="link-title"></p>
+				</a>
+				<figcaption class="description"></figcaption>
+				<p class="type"></p>
+			</figure>
+		</template>
+
+		<template id="pdf-block">
+			<figure class="pdf-block">
+				<h3 class="title"></h3>
+				<img class="image">
+				<a class="link"> <!-- PDF link inserts here. -->
+					<p class="link-title"></p> <!-- Repeats the block title. -->
+				</a>
+				<figcaption class="description"></figcaption>
+				<p class="type"></p>
+			</figure>
+		</template>
+
+		<template id="text-block">
+			<div class="tBlockHolder">
+				<figure class="text-block">
+					<div class="tHolder">
+						<div class="tLeaves"><div class="content"></div></div>
+						<div class="tTrunk"><h3 class="title"></h3></div>
+						<figcaption class="description"></figcaption>
+					</div>
+					
+					 <!-- Text blocks insert their HTML here. -->
+					<!-- <p class="type"></p> -->
+				</figure>
+			</div>
+		</template>
+
+		<!-- YouTube, Vimeo, etc. -->
+		<template id="video-embed-block">
+			<figure class="video-embed-block">
+				<h3 class="title"></h3>
+				<img class="image">
+				<div class="embed"></div>
+				<a class="link">
+					<p class="link-title"></p>
+				</a>
+				<figcaption class="description"></figcaption>
+				<p class="type"></p>
+			</figure>
+		</template>
+
+		<!-- Uploaded video files. -->
+		<template id="video-file-block">
+			<figure class="video-file-block">
+				<h3 class="title"></h3>
+				<img class="image">
+				<video class="video" controls></video> <!-- Video source inserts here. -->
+				<figcaption class="description"></figcaption>
+				<p class="type"></p>
+			</figure>
+		</template>
+
+		<div class="sprout" id="sprout1"></div>
+		<div class="sprout" id="sprout2"></div>
+		<div class="sprout" id="sprout3"></div>
+		<div class="sprout" id="sprout4"></div>
+		<div class="sprout" id="sprout5"></div>
+		<div class="sprout" id="sprout6"></div>
+		<div class="sprout" id="sprout7"></div>
+		<div class="sprout" id="sprout8"></div>
+		<div class="sprout" id="sprout9"></div>
+		<div class="sprout" id="sprout10"></div>
+		<div class="sprout" id="sprout11"></div>
+		<div class="sprout" id="sprout12"></div>
+		<div class="sprout" id="sprout13"></div>
+		<div class="sprout" id="sprout14"></div>
+		<div class="sprout" id="sprout15"></div>
+		<div class="sprout" id="sprout16"></div>
+		<div class="sprout" id="sprout17"></div>
+		<div class="sprout" id="sprout18"></div>
+		<div class="sprout" id="sprout19"></div>
+		<div class="sprout" id="sprout20"></div>
+		<div class="sprout" id="sprout21"></div>
+
+
+	</body>
+	<script src="assets/arena.js" type="text/javascript"></script>
+</html>
