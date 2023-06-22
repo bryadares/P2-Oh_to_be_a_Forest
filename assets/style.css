@@ -34,6 +34,16 @@ figure > *:not(:first-child),
 
 section.image-blocks {
 /*	background-color: lightpink;*/
+	position: relative;
+	width: 80vw;
+	height: auto;
+	left: 10vw;
+	margin: 0;
+	padding: 0;
+	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 figure.image-block {
@@ -339,4 +349,65 @@ div.sprout {
 #sprout20 {}
 #sprout21 {}
 
+@media screen and (max-width: 800px)
+{
+	section.image-blocks {
+		width: 90vw;
+		left: 5vw;
+	}
+
+	figure.image-block {
+	width: 66px;
+	top: 67px;
+	height: 50px;
+	margin: 0 20px 44.44px 20px;
+	}
+
+	div.bHolder {
+	position: relative;
+	width: 67px;
+	height: 50px;
+	}
+
+	section.text-blocks {
+	width: 90vw;
+	left: 5vw;
+	}
+
+	figure.text-block {
+	padding: 0 50px 44.44px 50px;
+	}
+
+	h3.bush {
+	font-size: 24px;
+	}
+
+	figcaption.description {
+	font-size: 12px;
+	}
+
+	figcaption.bush {
+		font-size: 16px;
+	}
+
+	div.tHolder {
+		height: 100px;
+		width: 100px;
+	}
+
+	div.tLeaves {
+	font-size: 16px;
+	word-spacing: -8px;
+	}
+
+	div.tTrunk {
+	font-size: 36px;
+	word-spacing: -12px;
+	}
+
+	div.sprout {
+	height: 5px;
+	width: 5px;
+	}
+}
 /* Clear them out once you’ve got your channel plugged in! */
