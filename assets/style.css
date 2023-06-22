@@ -69,6 +69,7 @@ a.link {
 }
 
 p.link-title {
+	display: none;
 	background-color: seagreen;
 }
 
@@ -357,8 +358,8 @@ div.sprout {
 	}
 
 	figure.image-block {
-	width: 32px;
-	top: 33px;
+	width: 34px;
+	top: 20px;
 	height: 25px;
 	margin: 0 10px 22.22px 10px;
 	}
@@ -379,7 +380,8 @@ div.sprout {
 	}
 
 	h3.bush {
-	font-size: 12px;
+		top: 125%;
+		font-size: 12px;
 	}
 
 	figcaption.description {
@@ -387,6 +389,7 @@ div.sprout {
 	}
 
 	figcaption.bush {
+		top: -62%;
 		font-size: 8px;
 	}
 
