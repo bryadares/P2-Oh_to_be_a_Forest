@@ -171,7 +171,8 @@ const sp21 = document.getElementById("sprout21");
 
 const sprouts = [sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, sp9, sp10, sp11, sp12, sp13, sp14, sp15, sp16, sp17, sp18, sp19, sp20, sp21];
 
-const bodyColor = document.querySelector("body").style.backgroundColor;
+const body = document.querySelector("body");
+const bodyColor = body.style.backgroundColor;
 // sp1.style.backgroundColor = "red";
 
 //https://www.w3docs.com/snippets/javascript/how-to-detect-idle-time-in-javascript.html
@@ -180,8 +181,16 @@ let colors = ["pink","red","orange","yellow","magenta","white"];
 let color = null;
 let randNum = 0;
 
+let code = [0,0,0];
+const eggDiv = document.getElementById("egg");
+
 let counter = 0;
 let timeoutDur = 3000;
+
+function easterEgg() {
+	eggDiv.style.opacity = "50%";
+	console.log("Easter Egg!!");
+};
 
 function clearSprouts() {
 	for (var i = 0; i < sprouts.length; i++) {
@@ -203,52 +212,65 @@ let inactivityTime = function () {
   document.onmousemove = resetTimer;
   document.onkeypress = resetTimer;
   window.onscroll = resetTimer;
+
   function sprout() {
   	let vw = window.innerWidth;
-	let vh = window.innerHeight;
-  	console.log("counter is " + counter);
-
+		let vh = window.innerHeight;
   	//assigns color
   	randNum = Math.round(Math.random() * (colors.length - 1));
   	color = colors[randNum];
-  	// console.log("randNum is " + randNum);
-  	// console.log("color is " + color);
     sprouts[counter].style.backgroundColor = color;
+
     //works when lever is flipped
     if(lever == 1)
     {
     	color = bodyColor;
     	leverCounter = counter + 1;
-    	if(leverCounter >= sprouts.length){leverCounter = leverCounter - sprouts.length;}
-    	console.log("lever counter is " + leverCounter);
+    	if(leverCounter >= sprouts.length)
+    		{leverCounter = leverCounter - sprouts.length;}
     	sprouts[leverCounter].style.backgroundColor = color;
-    	console.log("decayed");
     };
 
     //assigns location
     randNum = Math.random();
     topV =  randNum * vh;
-    // console.log("topV is" + topV);
     randNum = Math.random();
     leftV = randNum * vw;
-    // console.log("leftV is" + leftV);
     sprouts[counter].style.top = (topV.toString() + "px");
     sprouts[counter].style.left = (leftV.toString() + "px");
     counter++;
-    console.log("counter");
-    if (counter >= (sprouts.length - 1)){lever = 1;console.log("lever!");};
-    if (counter >= sprouts.length){counter = 0;console.log("maxed at " + counter);};
+    if (counter >= (sprouts.length - 1))
+    	{lever = 1;};
+    if (counter >= sprouts.length)
+    	{counter = 0;};
     time = setTimeout(sprout, timeoutDur);
+
+    console.log(counter + " bloom(s)");
   }
+
   function resetTimer() {
+  	if(counter != 0)
+  	{
+  		code[0] = code[1];
+  		code[1] = code[2];
+  		code[2] = counter;
+  	}
+
+  	while(code[2] > 9)
+  	{
+  		code[2] = code[2] - 10;
+  	}
+
   	counter = 0;
   	lever = 0;
   	vw = window.innerWidth;
-	vh = window.innerHeight;
-  	// sp1.style.backgroundColor = null;
+		vh = window.innerHeight;
   	clearSprouts();
     clearTimeout(time);
     time = setTimeout(sprout, timeoutDur)
+    if(code == "2,1,0"){
+    	easterEgg();
+    }
   }
 };
 inactivityTime();
