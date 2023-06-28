@@ -172,6 +172,8 @@ const sp21 = document.getElementById("sprout21");
 const sprouts = [sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, sp9, sp10, sp11, sp12, sp13, sp14, sp15, sp16, sp17, sp18, sp19, sp20, sp21];
 
 const shine = document.getElementById("prog2");
+const ray1 = document.getElementById("ray1");
+const ray2 = document.getElementById("ray2");
 
 const body = document.querySelector("body");
 const bodyStyle = getComputedStyle(body);
@@ -199,15 +201,21 @@ function easterEgg() {
 	console.log("Easter Egg!!");
 };
 
+let rayAppear = function () {
+	ray1.style.opacity = 0.02;
+	ray2.style.opacity = 0.02;
+}
+
+let rayDisappear = function () {
+	ray1.style.opacity = 0;
+	ray2.style.opacity = 0;
+}
+
 let cyc1 = function () {
-	console.log("cyc1");
-  // shine.style.transition = "0s";
 	shine.style.opacity = 1.0;
 }
 
 let cyc2 = function () {
-		console.log("cyc2");
-		// shine.style.transition = (timeoutDur - 1) + "ms";
 		shine.style.opacity = 0;
 }
 
@@ -215,10 +223,11 @@ function clearSprouts() {
 	for (var i = 0; i < sprouts.length; i++) {
 		sprouts[i].style.backgroundColor = null;
 	}
-	console.log("clear null");
 	clearTimeout;
 	cyc1();
+	rayDisappear();
 	setTimeout(cyc2,timeoutDur/2);
+	setTimeout(rayAppear, (timeoutDur * sprouts.length));
 };
 
 let topV = "0px";

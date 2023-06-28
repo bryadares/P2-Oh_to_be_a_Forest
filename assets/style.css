@@ -13,6 +13,34 @@ div.progressBloom {
 	
 }
 
+div.rayBox {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+div.rays {
+	position: fixed;
+	background-color: yellow;
+	opacity: 0;
+	transition: 3s;
+}
+
+#ray1 {
+	height: 60vh;
+	width: 40vw;
+}
+
+#ray2 {
+	height: 40vh;
+	width: 60vw;
+}
+
 #prog1 {
 	display: flex;
 	justify-content: space-around;
@@ -22,33 +50,16 @@ div.progressBloom {
 	top: 9px;
 
 	opacity: 1.0 !important;
-	height: 13px;
-	width: 13px;
+	height: 22px;
+	width: 22px;
 	z-index: 4;
 }
 
 #prog2 {
-	height: 17px;
-	width: 17px;
+	height: 26px;
+	width: 26px;
 	z-index: 5;
 	transition: 1.5s;
-}
-
-div.prog3 {
-	transition: background-color 1.8s;
-	rotate: 60deg;
-}
-
-div.prog4 {
-
-}
-
-div.prog5 {
-
-}
-
-div.prog6 {
-
 }
 
 #egg {
@@ -82,7 +93,7 @@ figure > *:not(:first-child),
 .description > *:not(:first-child),
 .content > *:not(:first-child) {
 	display: block;
-	margin-top: 1em;
+	margin-top: 1.5em;
 	margin-bottom: 1em;
 }
 
@@ -287,7 +298,7 @@ h3.bush {
 	
 	color: #86A865;
 	position: relative;
-	top: 91%;
+	top: 101%;
 	z-index: 2;
 
 
@@ -321,7 +332,7 @@ figcaption.bush {
 	opacity: 80%;
 	color: #26A22A;
 /*	#26A22A*/
-	top: -42%;
+	top: -57%;
 	left: -5%;
 	width: 110%;
 	z-index: 3;
@@ -410,6 +421,16 @@ div.sprout {
 
 @media screen and (max-width: 800px)
 {
+	#prog1 {
+	height: 13px;
+	width: 13px;
+}
+
+#prog2 {
+	height: 17px;
+	width: 17px;
+}
+
 	section.image-blocks {
 		width: 90vw;
 		left: 5vw;
