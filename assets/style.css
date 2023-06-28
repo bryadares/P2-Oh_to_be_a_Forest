@@ -5,6 +5,52 @@ body {
 	background-color: #3A671D;
 }
 
+div.progressBloom {
+	background-color: yellow;
+	/*1.2 w/ .6 overlap */
+	position: fixed;
+	opacity: 1.0;
+	
+}
+
+#prog1 {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	left: 49vw;
+	top: 9px;
+
+	opacity: 1.0 !important;
+	height: 13px;
+	width: 13px;
+	z-index: 4;
+}
+
+#prog2 {
+	height: 17px;
+	width: 17px;
+	z-index: 5;
+	transition: 1.5s;
+}
+
+div.prog3 {
+	transition: background-color 1.8s;
+	rotate: 60deg;
+}
+
+div.prog4 {
+
+}
+
+div.prog5 {
+
+}
+
+div.prog6 {
+
+}
+
 #egg {
 	position: fixed;
 	background-image: url('Green_hall.png');

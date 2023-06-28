@@ -171,8 +171,14 @@ const sp21 = document.getElementById("sprout21");
 
 const sprouts = [sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8, sp9, sp10, sp11, sp12, sp13, sp14, sp15, sp16, sp17, sp18, sp19, sp20, sp21];
 
+const shine = document.getElementById("prog2");
+
 const body = document.querySelector("body");
-const bodyColor = body.style.backgroundColor;
+const bodyStyle = getComputedStyle(body);
+const bodyColor = bodyStyle.backgroundColor;
+
+    // shine.style.backgroundColor = bodyColor;
+    // shine.style.transition = timeoutDur;
 // sp1.style.backgroundColor = "red";
 
 //https://www.w3docs.com/snippets/javascript/how-to-detect-idle-time-in-javascript.html
@@ -186,16 +192,33 @@ const eggDiv = document.getElementById("egg");
 
 let counter = 0;
 let timeoutDur = 3000;
+shine.style.transition = (timeoutDur/2 - 50) + "ms";
 
 function easterEgg() {
 	eggDiv.style.opacity = "50%";
 	console.log("Easter Egg!!");
 };
 
+let cyc1 = function () {
+	console.log("cyc1");
+  // shine.style.transition = "0s";
+	shine.style.opacity = 1.0;
+}
+
+let cyc2 = function () {
+		console.log("cyc2");
+		// shine.style.transition = (timeoutDur - 1) + "ms";
+		shine.style.opacity = 0;
+}
+
 function clearSprouts() {
 	for (var i = 0; i < sprouts.length; i++) {
 		sprouts[i].style.backgroundColor = null;
 	}
+	console.log("clear null");
+	clearTimeout;
+	cyc1();
+	setTimeout(cyc2,timeoutDur/2);
 };
 
 let topV = "0px";
@@ -205,7 +228,6 @@ let vh = window.innerHeight;
 let lever = 0;
 let leverCounter = counter;
 
-
 let inactivityTime = function () {
   let time;
   window.onload = resetTimer;
@@ -214,12 +236,16 @@ let inactivityTime = function () {
   window.onscroll = resetTimer;
 
   function sprout() {
+  	console.log("sprout");
   	let vw = window.innerWidth;
 		let vh = window.innerHeight;
   	//assigns color
   	randNum = Math.round(Math.random() * (colors.length - 1));
   	color = colors[randNum];
     sprouts[counter].style.backgroundColor = color;
+    
+    cyc1();
+		setTimeout(cyc2,timeoutDur/2);
 
     //works when lever is flipped
     if(lever == 1)
